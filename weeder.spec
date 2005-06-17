@@ -2,7 +2,7 @@ Summary:	Weeder - binary file identifier
 Summary(pl):	Weeder - narzêdzie do identyfikowania plików binarnych
 Name:		weeder
 Version:	0.9.7
-Release:	0.4
+Release:	0.9
 Epoch:		0
 License:	GPL
 Group:		Applications/Console
@@ -32,6 +32,7 @@ oraz pod k±tem szybko¶ci.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} -C src \
@@ -45,6 +46,13 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}}
 install src/%{name} $RPM_BUILD_ROOT%{_bindir}
 sed -e 's,/var/weeder,%{_datadir},g' %{name}.1 > $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 
+%post
+# move data from old original sources
+if [ -d /var/%{name} ] && [ ! -L /var/%{name} ]; then
+	mv /var/%{name}/* %{_datadir}
+	rmdir /var/%{name}
+fi
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -53,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README history.txt
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%dir %verify(not group mode user) %{_datadir}
+%dir %attr(1777,root,root) %{_datadir}
