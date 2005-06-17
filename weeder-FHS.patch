@@ -1,5 +1,5 @@
---- ../weeder-0.9.7/src/weeder.h~	1999-06-24 20:48:54.000000000 +0300
-+++ ../weeder-0.9.7/src/weeder.h	2005-06-15 17:53:23.000000000 +0300
+--- weeder-0.9.7/src/weeder.h~	1999-06-24 20:48:54.000000000 +0300
++++ weeder-0.9.7/src/weeder.h	2005-06-15 17:53:23.000000000 +0300
 @@ -28,7 +28,9 @@
  #define WEEDER_ENV_VAR  "WEEDER"
  
@@ -10,3 +10,14 @@
  
  struct slist {
      void *next;
+--- ../src/weeder.c~	2005-06-18 00:37:18.000000000 +0300
++++ ../src/weeder.c	2005-06-18 00:37:19.000000000 +0300
+@@ -309,7 +309,7 @@
+     printf ( "    -V........... verify files in filelist\n" );
+     printf ( "\n" );
+     printf ( "Environment-Var $WEEDER points to the datafile directory\n\n" );
+-    printf ( "Datafiles in: /var/weeder\n" );
++    printf ( "Datafiles in: " DATADIR "\n" );
+     printf ( "see manual page weeder(1) for further information.\n" );
+     }
+ 
