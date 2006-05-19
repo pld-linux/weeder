@@ -2,7 +2,7 @@ Summary:	Weeder - binary file identifier
 Summary(pl):	Weeder - narzêdzie do identyfikowania plików binarnych
 Name:		weeder
 Version:	0.9.7
-Release:	0.9
+Release:	1
 Epoch:		0
 License:	GPL
 Group:		Applications/Console
@@ -35,9 +35,11 @@ oraz pod k±tem szybko¶ci.
 %patch0 -p1
 
 %build
+# don't remove trailing slash from DATADIR
 %{__make} -C src \
 	DATADIR=%{_datadir}/ \
-	CFLAGS="%{rpmcflags}"
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
