@@ -37,9 +37,8 @@ oraz pod k±tem szybko¶ci.
 %build
 # don't remove trailing slash from DATADIR
 %{__make} -C src \
-	DATADIR=%{_datadir}/ \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags}" \
+	CFLAGS='%{rpmcflags} -DDATADIR=\"%{_datadir}/\"'
 
 %install
 rm -rf $RPM_BUILD_ROOT
