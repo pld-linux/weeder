@@ -1,5 +1,5 @@
 Summary:	Weeder - binary file identifier
-Summary(pl):	Weeder - narzêdzie do identyfikowania plików binarnych
+Summary(pl.UTF-8):   Weeder - narzÄ™dzie do identyfikowania plikÃ³w binarnych
 Name:		weeder
 Version:	0.9.7
 Release:	1
@@ -22,13 +22,13 @@ collections of pictures or archives. It serves as well for integrity
 checking purposes. Weeder is designed to be unlimited in the number of
 files processed and for speed.
 
-%description -l pl
-Weeder to narzêdzie pobieraj±ce odciski (sumy kontrolne i rozmiar)
-plików. Po pobraniu odcisku mo¿e wy¶wietliæ albo usun±æ dplikaty du¿ej
-liczby plików. Zwykle przydaje siê to przy zarz±dzaniu kolekcj±
-obrazów lub archiwów. Mo¿e s³u¿yæ te¿ do sprawdzania spójno¶ci. Weeder
-jest zaprojektowany tak, by dzia³a³ z nieograniczon± liczb± plików
-oraz pod k±tem szybko¶ci.
+%description -l pl.UTF-8
+Weeder to narzÄ™dzie pobierajÄ…ce odciski (sumy kontrolne i rozmiar)
+plikÃ³w. Po pobraniu odcisku moÅ¼e wyÅ›wietliÄ‡ albo usunÄ…Ä‡ dplikaty duÅ¼ej
+liczby plikÃ³w. Zwykle przydaje siÄ™ to przy zarzÄ…dzaniu kolekcjÄ…
+obrazÃ³w lub archiwÃ³w. MoÅ¼e sÅ‚uÅ¼yÄ‡ teÅ¼ do sprawdzania spÃ³jnoÅ›ci. Weeder
+jest zaprojektowany tak, by dziaÅ‚aÅ‚ z nieograniczonÄ… liczbÄ… plikÃ³w
+oraz pod kÄ…tem szybkoÅ›ci.
 
 %prep
 %setup -q
