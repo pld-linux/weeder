@@ -1,5 +1,5 @@
 Summary:	Weeder - binary file identifier
-Summary(pl.UTF-8):   Weeder - narzędzie do identyfikowania plików binarnych
+Summary(pl.UTF-8):	Weeder - narzędzie do identyfikowania plików binarnych
 Name:		weeder
 Version:	0.9.7
 Release:	1
