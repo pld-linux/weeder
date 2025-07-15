@@ -32,7 +32,7 @@ oraz pod kątem szybkości.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 # don't remove trailing slash from DATADIR
